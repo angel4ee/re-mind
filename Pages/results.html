@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RE-MIND - Results</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Iconify Icon Component CDN -->
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <!-- Google Fonts: Literata (SemiBold 600) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Literata', Georgia, serif;
+      font-weight: 600;
+    }
+
+    .font-serif-heading,
+    .font-sans-body {
+      font-family: 'Literata', Georgia, serif;
+    }
+
+    /* --- ANIMATION STYLES --- */
+    
+    /* Hero Animations */
+    @keyframes heroFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroBgZoom {
+      from { transform: scale(1.1); }
+      to { transform: scale(1); }
+    }
+
+    .animate-hero-bg {
+      animation: heroBgZoom 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animate-hero-content {
+      animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Scroll Reveal Base States */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92) translateY(20px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Activated Animation State */
+    .reveal-active {
+      opacity: 1 !important;
+      transform: translate(0) scale(1) !important;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans-body font-semibold antialiased overflow-x-hidden">
+
+  <!-- HERO SECTION -->
+  <section class="relative w-full h-80 md:h-105 overflow-hidden flex items-center justify-center">
+    
+    <!-- Animated Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center animate-hero-bg"
+         style="background-image: url('https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1600&auto=format&fit=crop');">
+    </div>
+
+    <!-- Dark Overlay for Readability -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-6xl w-full px-6 md:px-12 text-left animate-hero-content">
+      <p class="text-[#D4A054] text-xs md:text-sm tracking-widest font-semibold uppercase flex items-center gap-2 mb-2">
+        <span class="inline-block w-6 h-0.5 bg-[#D4A054]"></span>
+        DELIVERING TOOLS, KNOWLEDGE, AND LASTING IMPACT
+      </p>
+      <h1 class="text-white text-4xl md:text-6xl font-semibold font-serif-heading tracking-wide uppercase">
+        RESULTS
+      </h1>
+    </div>
+  </section>
+
+
+  <!-- CONTENT SECTION -->
+  <section class="max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-20">
+
+    <!-- INTRO HEADER -->
+    <div class="mb-14 reveal-up">
+      <h2 class="text-3xl md:text-4xl font-semibold font-serif-heading text-gray-900 mb-4 tracking-wide uppercase">
+        PROJECT RESULTS
+      </h2>
+      <p class="text-gray-600 text-sm md:text-base leading-relaxed max-w-4xl">
+        Throughout its three-year implementation, RE-MIND will develop and validate an innovative set of tools, methodologies, and resources that enable museums across Europe to become more inclusive, mindful, and digitally balanced cultural spaces.
+      </p>
+    </div>
+
+    <!-- RESULTS GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+      <!-- CARD 1 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="icon-park-outline:museum-one" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Mindful Museums Model
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          The project’s flagship result will be the Mindful Museum Model - an innovative, evidence-based framework that integrates mindfulness practices, calm technology, digital wellbeing, and intergenerational engagement into museum education and audience development. Designed to be transferable and scalable, the model will provide museums with practical guidance for creating more meaningful visitor experiences.
+        </p>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="hugeicons:toolbox" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          RE-MIND Training Toolkit
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          A comprehensive Training Toolkit will be developed to support museum professionals in implementing the Mindful Museum approach. The toolkit will include methodologies, practical exercises, guidelines, multimedia learning resources, and best practices for designing mindful museum experiences and engaging diverse audiences.
+        </p>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="streamline-sharp:graduation-cap" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Smart Learning Ecosystem
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          RE-MIND will establish an online Smart Learning Ecosystem, offering accessible, self-paced learning opportunities for museum professionals across Europe. The platform will feature interactive training modules, digital resources, case studies, and collaborative learning opportunities while supporting continuous professional development through micro-credentialing.
+        </p>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="ph:certificate-thin" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Micro-Credentials and Professional Recognition
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          Museum professionals completing the training programme will be able to earn micro-credentials recognising newly acquired competences in areas such as mindfulness-based audience engagement, digital wellbeing, and intergenerational facilitation. These credentials will be aligned with European competence frameworks, enhancing the recognition and portability of the acquired skills.
+        </p>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="streamline-ultimate:team-meeting" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Capacity Building for Museum Professionals
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          The project will strengthen the capacities of museum staff by equipping them with innovative methods and practical skills to: Design mindful and inclusive museum experiences; Promote healthy and balanced use of digital technologies; Engage children, young people, older adults, and families through intergenerational activities; Foster emotional wellbeing and social inclusion within museum environments.
+        </p>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="iconoir:book" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Educational Activities and Intergenerational Programmes
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          RE-MIND will design and pilot a range of educational activities, mindfulness sessions, storytelling experiences, and intergenerational workshops that actively involve children, Generation Z, older adults, and museum professionals in co-creating museum experiences.
+        </p>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="iconoir:flask" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Pilot Implementation and Validation
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          The Mindful Museum Model will be tested and validated through pilot activities and showroom events in partner museums across Europe. These real-life demonstrations will provide valuable feedback, refine the methodology, and showcase its practical application in different cultural contexts.
+        </p>
+      </div>
+
+      <!-- CARD 8 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="majesticons:award-line" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Mindful Museum Recognition
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          The project will introduce a “Mindful Museum” recognition scheme, acknowledging museums that successfully adopt the RE-MIND methodology and demonstrate excellence in promoting digital wellbeing, inclusion, and intergenerational engagement.
+        </p>
+      </div>
+
+      <!-- CARD 9 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="akar-icons:network" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Mindful Museums Network
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          To ensure the long-term sustainability of the project, RE-MIND will establish the Mindful Museums Network, bringing together museums, cultural organisations, educators, and stakeholders interested in promoting mindful and inclusive cultural participation. The network will facilitate knowledge exchange, collaboration, and the continued dissemination of project results beyond the project’s lifetime.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM ROW (2 CENTERED CARDS) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto mt-6 md:mt-8">
+
+      <!-- CARD 10 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="fluent:document-48-light" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Policy Recommendations and European Outreach
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          RE-MIND will produce recommendations and practical guidance for cultural institutions, museum networks, and policymakers, contributing to the development of more inclusive, digitally responsible, and wellbeing-oriented cultural policies across Europe.
+        </p>
+      </div>
+
+      <!-- CARD 11 -->
+      <div class="group bg-white border border-gray-200/80 p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-amber-500/10 hover:-translate-y-2 hover:border-[#D4A054] transition-all duration-500 flex flex-col items-center text-center reveal-scale">
+        <!-- Icon -->
+        <div class="mb-6 text-[#E59838] transition-transform duration-500 group-hover:scale-110 group-hover:text-[#83479B] flex items-center justify-center">
+          <iconify-icon icon="streamline-flex:decent-work-and-economic-growth" class="text-5xl"></iconify-icon>
+        </div>
+        <h3 class="font-sans-body font-semibold text-gray-900 text-base mb-3 leading-snug">
+          Long-Term Impact
+        </h3>
+        <p class="text-gray-500 text-xs md:text-sm leading-relaxed text-left">
+          By the end of the project, RE-MIND will provide museums with a validated and sustainable capacity-building model that enhances audience engagement, supports digital wellbeing, promotes intergenerational dialogue, and strengthens the role of museums as spaces for learning, reflection, and community wellbeing across Europe.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SCROLL REVEAL INTERSECTION OBSERVER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-active');
+          }
+        });
+      }, { 
+        threshold: 0.1 
+      });
+
+      document.querySelectorAll('.reveal-up, .reveal-scale').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>

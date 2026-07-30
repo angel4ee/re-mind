@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RE-MIND - Consortium</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Literata (SemiBold 600) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;0,7..72,700;1,7..72,600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* GLOBAL LITERATA SEMIBOLD TYPOGRAPHY */
+    body {
+      font-family: 'Literata', Georgia, serif;
+      font-weight: 600; /* SemiBold */
+    }
+
+    .font-serif-heading, 
+    .font-sans-body {
+      font-family: 'Literata', Georgia, serif;
+    }
+
+    /* --- ANIMATION STYLES --- */
+    
+    /* Hero Animations */
+    @keyframes heroFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes heroBgZoom {
+      from { transform: scale(1.1); }
+      to { transform: scale(1); }
+    }
+
+    .animate-hero-bg {
+      animation: heroBgZoom 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .animate-hero-content {
+      animation: heroFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Scroll Reveal Base States */
+    .reveal-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92) translateY(20px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Activated Animation State */
+    .reveal-active {
+      opacity: 1 !important;
+      transform: translate(0) scale(1) !important;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 font-sans-body font-semibold antialiased overflow-x-hidden">
+
+  <!-- HERO SECTION -->
+  <section class="relative w-full h-80 md:h-105 overflow-hidden flex items-center justify-center">
+    
+    <!-- Animated Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center animate-hero-bg"
+         style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1600&auto=format&fit=crop');">
+    </div>
+
+    <!-- Dark Overlay for Readability -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Hero Content -->
+    <div class="relative z-10 max-w-6xl w-full px-6 md:px-12 text-left animate-hero-content">
+      <p class="text-[#D4A054] text-xs md:text-sm tracking-widest font-semibold uppercase flex items-center gap-2 mb-2">
+        <span class="inline-block w-6 h-0.5 bg-[#D4A054]"></span>
+        THE PEOPLE BEHIND RE-MIND
+      </p>
+      <h1 class="text-white text-4xl md:text-6xl font-semibold font-serif-heading tracking-wide uppercase">
+        CONSORTIUM
+      </h1>
+    </div>
+  </section>
+
+
+  <!-- CONTENT SECTION -->
+  <section class="max-w-6xl mx-auto px-6 md:px-12 py-16 md:py-20">
+
+    <!-- INTRO HEADER -->
+    <div class="mb-14 reveal-up">
+      <h2 class="text-3xl md:text-4xl font-semibold font-serif-heading text-gray-900 mb-4 tracking-wide uppercase">
+        A STRONG EUROPEAN PARTNERSHIP
+      </h2>
+      <p class="text-gray-600 text-sm md:text-base leading-relaxed max-w-4xl">
+        RE-MIND brings together 11 partner organizations from 7 European countries, united by a shared commitment to creating more mindful, inclusive, and engaging museum experiences. Through cross-border collaboration, partners from Serbia, Italy, Croatia, Poland, Slovenia, Bosnia and Herzegovina, and North Macedonia contribute their expertise, knowledge, and cultural perspectives to drive innovation and lasting impact across Europe's museum sector.
+      </p>
+    </div>
+
+    <!-- PARTNERS GRID (3 COLUMNS) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- PARTNER 1: Minds Europe (Project Coordinator) -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/MindsEurope.png" alt="Minds Europe Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Serbia</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Minds Europe (Project Coordinator)</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            As coordinator of RE-MIND, MEU leads the development of the Mindful Museum model, helping museums and educational spaces become more accessible, reflective and people-centered.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 2: Archivio della Memoria -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/AdM.png" alt="Archivio della Memoria Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Italy</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Archivio della Memoria</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            Within RE-MIND, AdM leads the development of the Mindful Museum Education and Outreach Model and Training Toolkit, helping create inclusive and digitally balanced museum experiences.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 3: Balkan Museum Network -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/BMN.png" alt="Balkan Museum Network Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Bosnia and Herzegovina</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Balkan Museum Network</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            Within the RE-MIND project, BMN leads Work Package 5: "Implementation and Validation of the Mindful Museum Capacity-Building Model," coordinating showcase events and many more.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 4: Tehnički Muzej Nikola Tesla -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/TMNT.png" alt="Tehnički Muzej Nikola Tesla Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Croatia</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Tehnicki Muzej Nikola Tesla</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            As a partner in the RE-MIND Project, TMNT contributes to audience engagement activities and supports the implementation and validation of the Mindful Museum Capacity-Building Model.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 5: NI Institute and Museum Bitola -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/NIIMB.png" alt="NI Institute and Museum Bitola Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">North Macedonia</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">NI Institute and Museum Bitola</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            NIIMB will help pilot and validate the Mindful Museum model, fostering meaningful intergenerational engagement and innovative cultural experiences.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 6: Museum of Vojvodina -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/MOV.png" alt="Museum of Vojvodina Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Serbia</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Museum of Vojvodina</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            Within RE-MIND, it contributes as an advisor and actively supports audience engagement and the implementation of the Mindful Museum Capacity-Building Model.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 7: Scuola Nazionale Patrimonio Attività Culturali -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/SNPAC.jpg" alt="Scuola Nazionale Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Italy</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Scuola Nazionale Patrimonio Attivita Culturali</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            As a partner, Scuola contributes to the development, testing, and validation of the Mindful Museum model.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 8: Brainster -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/Brainster.png" alt="Brainster Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">North Macedonia</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Brainster</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            Brainster leads the Communication and Dissemination Work Package, developing the project's branding, visual identity, and communication strategy.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 9: Zavod Koda -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/ZAVODVODA.png" alt="Zavod Koda Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Slovenia</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Zavod Koda</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            KODA leads the Quality Assurance, Ethics, and Evaluation strand, ensuring that project activities and outcomes remain aligned with ethical principles, standards and accountability.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BOTTOM ROW (2 CENTERED CARDS FOR PARTNERS 10 & 11) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-6">
+
+      <!-- PARTNER 10: Algebra Bernays University -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/AB.png" alt="Algebra Bernays University Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Croatia</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Algebra Bernays University</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            Algebra Bernays University leads Work Package 3, developing the RE-MIND Smart Learning Ecosystem for micro-credentialing and institutional endorsement.
+          </p>
+        </div>
+      </div>
+
+      <!-- PARTNER 11: CWEP (Centrum Wspierania Edukacji i Przedsiębiorczości) -->
+      <div class="group bg-white border border-gray-200/80 p-6 md:p-8 rounded-sm shadow-sm hover:shadow-xl hover:shadow-purple-900/10 hover:-translate-y-2 hover:border-[#83479B] transition-all duration-500 flex flex-col reveal-scale">
+        <div class="h-32 flex items-center justify-center mb-8 overflow-hidden">
+          <img src="logos/CWEP.png" alt="CWEP Logo" class="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="grow">
+          <span class="text-[10px] font-semibold text-[#83479B] tracking-wider uppercase mb-2 block">Poland</span>
+          <h3 class="text-[15px] font-semibold text-gray-900 mb-2 leading-tight transition-colors duration-300 group-hover:text-[#83479B]">Centrum Wspierania Edukacji i Przedsiebiorczosci</h3>
+          <p class="text-[13px] text-gray-600 leading-relaxed">
+            CWEP leads WP4: Education and Intergenerational Audiences Engagement in Mindful Museum Experiences.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SCROLL REVEAL INTERSECTION OBSERVER SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-active');
+          }
+        });
+      }, { 
+        threshold: 0.1 
+      });
+
+      document.querySelectorAll('.reveal-up, .reveal-scale').forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
+</html>
